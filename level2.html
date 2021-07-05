@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hacker</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <center>
+    <h1 class="text">Level 2</h1>
+    <p class="text">Defeat this boss, then you can go.</p>
+    <h2 class="text" id="placeholder">Health: 999999</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO-6VOFAinNzw_FTkXv5pqus5ngrb0WizuMITCDIME4ewkV66V&s" onclick="hurt()">
+    <script>
+      var health = 999999;
+      function hurt(){
+        health -= 1;
+        document.getElementById("placeholder").innerHTML = "Health: "+health;
+        if(health <= 0){
+          window.location = "level3.html";
+        }
+      }
+    </script>
+    </center>
+  </body>
+</html>
